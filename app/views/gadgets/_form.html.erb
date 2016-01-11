@@ -1,19 +1,58 @@
-<%= simple_form_for(@gadget) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :make %>
-    <%= f.input :model %>
-    <%= f.input :available %>
-    <%= f.input :checked_out %>
-    <%= f.input :checked_in %>
-    <%= f.association :user %>
-    <%= f.input :location %>
-    <%= f.input :orientation %>
-    <%= f.input :os_version %>
+<%= form_for @gadget, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :make, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :make, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :model, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :model, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :available, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :available, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :checked_out, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :checked_out, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :checked_in, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :checked_in, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :orientation, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :orientation, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :os_version, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :os_version, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  gadgets_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
