@@ -1,0 +1,19 @@
+<%= simple_form_for(@gadget) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :make %>
+    <%= f.input :model %>
+    <%= f.input :available %>
+    <%= f.input :checked_out %>
+    <%= f.input :checked_in %>
+    <%= f.association :user %>
+    <%= f.input :location %>
+    <%= f.input :orientation %>
+    <%= f.input :os_version %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

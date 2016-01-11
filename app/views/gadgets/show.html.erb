@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @gadget.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @gadget.model %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @gadget.available %>
+</p>
+
+<p>
+  <strong>Checked out:</strong>
+  <%= @gadget.checked_out %>
+</p>
+
+<p>
+  <strong>Checked in:</strong>
+  <%= @gadget.checked_in %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @gadget.user %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @gadget.location %>
+</p>
+
+<p>
+  <strong>Orientation:</strong>
+  <%= @gadget.orientation %>
+</p>
+
+<p>
+  <strong>Os version:</strong>
+  <%= @gadget.os_version %>
+</p>
+
+<%= link_to 'Edit', edit_gadget_path(@gadget) %> |
+<%= link_to 'Back', gadgets_path %>
