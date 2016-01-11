@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  available: false
+  checked_out: 2016-01-11 18:28:32
+  checked_in: 2016-01-11 18:28:32
+  user_id: 
+  location: MyString
+  orientation: MyString
+  os_version: MyString
+
+two:
+  make: MyString
+  model: MyString
+  available: false
+  checked_out: 2016-01-11 18:28:32
+  checked_in: 2016-01-11 18:28:32
+  user_id: 
+  location: MyString
+  orientation: MyString
+  os_version: MyString
